@@ -8,5 +8,5 @@ class Solution:
                 nums[place_holder],nums[seeker]=nums[seeker],nums[place_holder]
                 place_holder+=1
             seeker+=1
-        holder = 0
+
        
