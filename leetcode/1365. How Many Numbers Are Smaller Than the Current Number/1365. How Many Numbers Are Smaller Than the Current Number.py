@@ -1,9 +1,7 @@
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        copy=sorted(nums.copy())
         value=[]
+        sort_=sorted(nums.copy())
         for i in nums:
-            y=copy.index(i)
-            value.append((len(copy[:y])))
-        return(value)
-        
+            value.append(bisect.bisect_left(sort_,i))
+        return value
